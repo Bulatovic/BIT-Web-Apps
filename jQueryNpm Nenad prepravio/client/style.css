@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #ec6f75;
+    height: 50px;
+    margin: 1% 0%;
+
+}
+
+div {
+    color: white;
+    background-color: #556e79;
+    margin: auto;
+    width: 90%;
+}
