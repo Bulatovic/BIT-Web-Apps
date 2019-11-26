@@ -1,0 +1,46 @@
+<App>
+    <Header>
+        <Navbar>
+
+        </Navbar>
+        <Search />
+    </Header>
+    <Body>
+        <SectionLeft>
+            <Articles>
+                <Li>Home</Li>
+                <Li>Trending</Li>
+                <Li>History</Li>
+            </Articles>
+            <Articles>
+                <Li>Music</Li>
+                <Li>Sports</Li>
+                <Li>Gaming</Li>
+                <Li>News</Li>
+                <Li>Live</Li>
+            </Articles>
+            <Articles>
+                <Input>SIGN IN</Input>
+            </Articles>
+            <Articles>
+                <Li>Settings</Li>
+                <Li>Help</Li>
+                <Li>Send Feedback</Li>
+
+
+            </Articles>
+
+        </SectionLeft>
+
+        <SectionRight>
+
+
+
+        </SectionRight>
+
+
+
+
+
+    </Body>
+</App>
