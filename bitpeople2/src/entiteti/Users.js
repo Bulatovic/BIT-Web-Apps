@@ -4,10 +4,16 @@ class User {
         console.log(userData);
         this.id = userData.login.uuid;
         this.name = userData.name.first;
+        this.lastName = userData.name.last;
         this.picture = userData.picture.large;
         this.email = userData.email;
         this.birthday = userData.dob.date;
         this.gender = userData.gender;
+    }
+
+
+    getFullName() {
+        return `${this.name} ${this.lastName}`
     }
     getEmail() {
         const [username, domain] = this.email.split("@");
@@ -22,5 +28,6 @@ class User {
 
         return `${date}.${month}.${year} `
     }
+
 }
 export default User

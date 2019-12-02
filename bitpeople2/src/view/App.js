@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import UsersPage from './Users/UsersPage';
@@ -10,8 +10,10 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Route exact path="/" component={UsersPage} />
-        <Route exact path="/about" component={About} />
+        <Switch>
+          <Route exact path="/" component={UsersPage} />
+          <Route exact path="/about" component={About} />
+        </Switch>
         <Footer />
       </>
     );
