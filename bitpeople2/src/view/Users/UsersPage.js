@@ -41,7 +41,7 @@ export default class UsersPage extends Component {
 
 
     render() {
-        const filteredUsers = this.state.users.filter(a => a.name.toLowerCase().includes(this.state.query));
+        const filteredUsers = this.state.users.filter(a => a.name.toLowerCase().startsWith(this.state.query));     //bilo je includes(this.state.query)
 
         return (
             <div>
