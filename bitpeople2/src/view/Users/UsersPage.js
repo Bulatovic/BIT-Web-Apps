@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import UserList from './UsersList'
 import fetchUsers from '../../service/User-service'
 import GridList from '../Users/UserGridList'
+import Loading from '.././components/Loading/loading'
 
 
 export default class UsersPage extends Component {
@@ -11,7 +12,8 @@ export default class UsersPage extends Component {
         this.state = {
             isGrid: false,
             query: "",
-            users: []
+            users: [],
+            loading: true
         }
         //this.onChange = this.onChange
     }
@@ -27,8 +29,10 @@ export default class UsersPage extends Component {
     }
 
     loadUsers = () => {
+        this.setState({ loading: true })
         fetchUsers()
-            .then((users) => this.setState({ users: users }))
+            .then((users) => this.setState({ users: users, loading: false }))
+
     }
 
     changeLayout = () => {
@@ -41,9 +45,15 @@ export default class UsersPage extends Component {
 
 
     render() {
+        if (this.state.loading === true) {
+            return <Loading />
+        }
+
+
         const filteredUsers = this.state.users.filter(a => a.name.toLowerCase().startsWith(this.state.query));     //bilo je includes(this.state.query)
 
         return (
+
             <div>
                 <h1>Users</h1>
                 <a href="#" onClick={this.changeLayout}><i class="material-icons">view_module</i></a>
